@@ -22,8 +22,9 @@ function addEventListener() {
         .catch(errorHandler);
 }
 
+// Error Handler for event listener.
 function errorHandler(error) {
-    console.log("An unexpected error has been occured", error);
+    console.log("An unexpected error has been occured :: ", error);
     alert("Issues in server, please come after some time.");
 }
 
