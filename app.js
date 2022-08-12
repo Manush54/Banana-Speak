@@ -1,31 +1,38 @@
 var btnTranslate = document.querySelector("#btn-translate");
 // console.log(btnTranslate);
-btnTranslate.addEventListener('click', addEventListener)
+btnTranslate.addEventListener("click", addEventListener);
 var textInput = document.querySelector("#txt-input");
 var outputDiv = document.querySelector("#output");
 var serverUrl = "https://api.funtranslations.com/translate/minion.json?";
 
 function getTranslateUrl(input) {
-    return serverUrl + "text= " + input;
+  return serverUrl + "text= " + input;
 }
 
 function addEventListener() {
-    console.log("Clicked!!!");
-    console.log("input", textInput.value); //takes input
-    var inputText = textInput.value; //fetches into process
-    fetch(getTranslateUrl(inputText))
-        .then(response => response.json())
-        .then(json => {
-            var translateText = json.contents.translated;
-            outputDiv.innerText = translateText; //output
-        })
-        .catch(errorHandler);
+  console.log("Clicked!!!");
+  console.log("input", textInput.value); //takes input
+  var inputText = textInput.value; //fetches into process
+  fetch(getTranslateUrl(inputText))
+    .then((response) => response.json())
+    .then((json) => {
+      var translateText = json.contents.translated;
+      outputDiv.innerText = translateText; //output
+    })
+    .catch(errorHandler);
 }
 
 function errorHandler(error) {
-    console.log("An unexpected error has been occured", error);
-    alert("Issues in server, please come after some time.");
+  console.log("An unexpected error has been occured", error);
+  alert("Issues in server, please come after some time.");
 }
+
+/*
+Author of Comment: Srushti
+Comment: In the index.html file, I have moved the footer tag inside the body tag as that is the valid format.
+If you want to separate main body from the footer, you can use the <main> tag around the main content, and have separate 
+tags for <header> and <footer>
+*/
 
 // function url(text) { return "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text= " + text }
 // var url0 = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text=I am Jaahanava Joshi";
