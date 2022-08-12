@@ -49,6 +49,7 @@ function errorHandler(error) {
 // doFetch(text3);
 
 // function doFetch(text) {
+//     console.log(text)
 //     fetch(url(text))
 //     .then(response => response.json())
 //         .then(json => console.log(json))
