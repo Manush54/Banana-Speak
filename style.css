@@ -2,6 +2,7 @@
 
 title {
     background-color: yellow;
+    margin: auto;
 }
 
 body{
@@ -91,5 +92,5 @@ nav {
 .foot p {
     max-width: 600px;
     margin: auto;
-    
+    padding: auto;
 } */
